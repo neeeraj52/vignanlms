@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>faculty page</title>
+</head>
+<body>
+    <div class="header">
+        <img id="logo" src="logo.png" alt="logo">
+        <img id="profile"src="neeraj.jpeg" alt="profile">
+    </div>
+    <div class="body">
+        <div class="slidebar">
+            <ul>
+                <li><a href="https://vignan-lms.ddns.net/" target="frame1">attendence</a></li>
+                <li>assignments</li>
+                <li>valuation</li>
+                <li>notes</li>
+                <li>announcements</li>
+            </ul>
+        </div>
+        <iframe name="frame1" style="width:70%;"></iframe>
+    </div>
+</body>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    display:flex;
+    justify-content: space-between;
+    height:110px;
+    background-color: black;
+}
+#logo{
+    width: 300px;
+    height:100px;
+    float:left;
+}
+#profile{
+    width:60px;
+    height:60px;
+    border:2px solid white;
+    border-radius: 50%;
+    float:right;
+    margin:auto 20px;
+}
+.slidebar{
+    background-color: black;
+    width:30%;
+    height:86vh;
+    position: sticky;
+}
+.slidebar ul{
+    list-style: none;
+    padding-top: 40px;
+}
+.slidebar ul li{
+    color: azure;
+    text-align: center;
+    font-size: x-large;
+    padding-bottom: 20px;
+}
+.body{
+    display: flex;
+}
+.slidebar a{
+    text-decoration: none;
+    color:azure;
+}
+</style>
+</html>
