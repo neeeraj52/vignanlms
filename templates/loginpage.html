@@ -92,11 +92,6 @@
             height: 100%;
             width: 100%;
         }
-        body{
-            background-image: url('static/project logo.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
         #image{
             margin-top: 10px;
             width: 70px;;
@@ -125,6 +120,16 @@
             padding-top: 5px;
             margin-top: 15px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+        }
+      @media screen and (min-width: 480px) {
+          body {
+            background-image:url('static/project logo.jpg');
+          }
+        }
+      @media screen and (max-width: 480px) {
+          body {
+            background-image:url('static/potrait.jpg');
+          }
         }
     </style>
     <script>
