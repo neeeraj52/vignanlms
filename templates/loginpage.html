@@ -126,6 +126,7 @@
           body {
             background-image:url('static/project logo.jpg');
             background-size:cover;
+            background-repeat:no-repeat;
             
           }
         }
@@ -165,6 +166,7 @@
             if (usr_input == captcha.innerHTML) {
                 var s = document.getElementById("key")
                     .innerHTML
+                location.href="/faculty"
             }
             else {
                 var s = document.getElementById("key")

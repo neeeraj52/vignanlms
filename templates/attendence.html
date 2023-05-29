@@ -1,0 +1,85 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" type="static/png" href="static/favicon.png">
+    <link rel="stylesheet" href="attendence.css">
+ </head>
+ <body>
+    <div class="col">
+        <div class="main">
+            <h4>YEAR</h4>
+            <select id="x">
+                <option value="select ">select</option>
+                <option value="1">1 year</option>
+                <option value="2">2 year</option>
+                <option value="3">3 year</option>
+                <option value="4">4 year</option>
+            </select>
+            <div>  
+                <h4>BRANCH</h4>
+                <select id="x">
+                    <option value="select ">select</option>
+                    <option value="eee">eee</option>
+                    <option value="ece">ece</option>
+                    <option value="mech">mech</option>
+                    <option value="cse">cse</option>
+                </select>
+            </div>
+            <div>       
+                <h4>SECTION</h4>
+                <select id="x">
+                    <option value="select ">select</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                    <option value="d">D</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" onclick="alert('success')" >
+            </div>                               
+        </div>    
+ </body>
+   <style>
+           *{
+           text-decoration: none;
+      }
+      body{
+          box-sizing: border-box;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .main{
+          margin: 0 auto;
+          margin-top:3px;
+          text-align: center;
+          padding-top:100px;
+          padding-bottom:0px;
+          border-radius: 2px solid black;
+      }
+      #x{
+          padding-bottom:5px;
+          padding-left: 20px;
+          padding-right:20px;
+          width:20%;
+          height:30px;
+      }
+      h4{
+          padding-top:1px;
+          font-size: 30px;
+      }
+      input[type="submit"]{
+          margin-top: 20px;
+          background-color: blueviolet;
+          color: white;
+          width:100px;
+          height:40px;
+          text-align: center;
+          border:1px solid blueviolet;
+          border-radius: 15px;
+      }
+   </style>
+ </html>

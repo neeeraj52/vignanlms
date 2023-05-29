@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <form>
+            <label for="Branches"><b>Choose a Branch:</b></label>
+            <select name="Branches" id="Branches">
+                <option value="Select">Select</option>
+                <option value="CIVIL">Civil Engineering</option>
+                <option value="EEE">Electrical and Electronics Engineering</option>
+                <option value="MECH">Mechanical Engineering</option>
+                <option value="ECE">Electronics and Communication Engineering</option>
+                <option value="CSE">Computer Scienece and Engineering</option>
+                <option value="AIML">Artificial Intelligence and Machine Learning</option>
+                <option value="DS">Data Science</option>
+                <option value="IT">Information Technology</option>
+                <option value="EIE">Electronics Instumentation and Engineering</option>
+                <option value="AIDS">Artificial Intelligence and Data Science</option>
+                <option value="BSH">Basic Sciences and Humanities</option>
+            </select><br>
+            <div id="cx">
+                <label for="Year"><b>Choose a Year:</b></label>
+                <select name="Year" id="Year">
+                    <option value="select">Select</option>
+                    <option value="1styear">1st Year</option>
+                    <option value="2ndyear">2nd Year</option>
+                    <option value="3rdyear">3rd Year</option>
+                    <option value="4thyear">4th Year</option>
+                </select>
+            </div>
+            <div id="dx">
+                <label for="Sections"><b>Choose a Section:</b></label>
+                <select name="section" id="section">
+                    <option value="select">Select</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                </select>
+            </div>
+        </form>
+        <p><Note><b>Note*:</b> Every Field is Mandatory</Note></p>
+        <p><label><b>Task:</b></label></p>
+        <textarea id="task" name="task" rows="8px" cols="50px"></textarea><br>
+        <div id="ex">
+            <label for="start date"><b>Start Date:</b></label>
+            <input type="date" id="ax"><br>
+        </div>
+        <div id="fx">
+            <label for="End date"><b>End Date:</b></label>
+            <input type="date" id="bx">
+        </div>
+        <p><label><b>References:</b></label></p>
+        <textarea id="References" name="References" rows="8px" cols="50px"></textarea><br>
+        <button type="submit" id="submit">Submit</button>
+    </body>
+    <style>
+        body{
+            width:450px;
+            height:600px;
+            padding: 20px;
+            margin: auto;
+            margin-top: 50px;
+        }
+        #submit{
+            margin-top: 20px;
+            margin-left: 180px;
+            height: 40px;
+            width: 80px;
+            font-size: large;
+            background-color: rgb(117,09,127);
+            color: aliceblue;
+            border-radius: 5px;
+        }
+        #submit:hover{
+            background-color: rgb(79, 2, 67);
+        }
+        #cx{
+            padding-top: 10px;
+        }
+        #dx{
+            padding-top: 10px;
+        }
+        #ex{
+            padding-top: 10px;
+        }
+        #fx{
+            padding-top: 10px;
+        }
+        textarea{
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+        #Branches{
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        #Year{
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        #section{
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        input[type="date"]{
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+    </style>
+</html>
