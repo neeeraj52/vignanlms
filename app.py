@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, session, redirect, url_for
 from database import client
 
 app = Flask(__name__)
+app.secret_key = "super secret key"
 
 
 def load_students_from_db(data):
@@ -18,9 +19,32 @@ def home():
   return render_template("loginpage.html")
 
 
+@app.route("/login", methods=["GET", "POST"])
+def login():
+  msg = ""
+  if request.method == "POST":
+    username = request.form["username"]
+    password = request.form["password"]
+    dbs = client["login"]
+    coll = dbs["success"]
+    result = coll.find_one({"username": username, "password": password})
+    if result:
+      session["loggedin"] = True
+      session["username"] = result["username"]
+      return redirect(url_for(result["role"]))
+    else:
+      msg = "incorrect user name/password try again!!!"
+  return render_template("loginpage.html", msg=msg)
+
+
 @app.route("/faculty")
 def faculty():
   return render_template("faculty.html")
+
+
+@app.route("/student")
+def student():
+  return render_template("student.html", username=session["username"])
 
 
 @app.route("/attendence")

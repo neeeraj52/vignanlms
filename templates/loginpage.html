@@ -120,7 +120,13 @@
             margin-right: 70px;
             padding-top: 5px;
             margin-top: 15px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            width: 100px;
+            height:40px;
+            background-color:blueviolet;
+            border-radius:15px;
+            color:white;
+            font-style:bold;
         }
       @media screen and (min-width: 480px) {
           body {
@@ -139,6 +145,10 @@
           }
           
         }
+      #error{
+        color:red;
+        margin-left:40%;
+      }
     </style>
     <script>
         var captcha;
@@ -166,7 +176,6 @@
             if (usr_input == captcha.innerHTML) {
                 var s = document.getElementById("key")
                     .innerHTML
-                location.href="/faculty"
             }
             else {
                 var s = document.getElementById("key")
@@ -186,11 +195,13 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"integrity= "sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"crossorigin="anonymous">
     </head>
     <body>
+      <p id="error">{{msg}}</p>
+      <form action="{{url_for('login')}}" method="post">
         <div class="container">
             <form action="/login" method="post">
-              <input type="text" id="ax" placeholder="Student ID" name="username">
-              <input type="password" id="bx" class="col-xs-offset-2" placeholder="Password" name="password">
-            </form>
+              <input type="text" id="ax" placeholder="Student ID" name="username" required>
+              <input type="password" id="bx" class="col-xs-offset-2" placeholder="Password" name="password" required>
+          
             <input type="checkbox">Remember me
             <a href="https://www.hackerrank.com/auth/forget_password?_l=2i2025">Forget your password?</a><br/><br/>
             <body onload="generate()">
@@ -203,9 +214,11 @@
                 <div id="image" class="inline" selectable="False">
                 </div>
             </body>
-            <button type="submit" id="butn" onclick="printmsg()">Log In</button>
+            <input type="submit" value="login" id="butn" onclick="printmsg()">
             <p id="key"></p>
-            </div>
+          </div>
+      </form>
+        
         </div><br/>
         <footer>
             &copy;copyright by <b><h2>Vignan Group Of Institutions</h2></b>
