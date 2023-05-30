@@ -166,7 +166,6 @@
             if (usr_input == captcha.innerHTML) {
                 var s = document.getElementById("key")
                     .innerHTML
-                location.href="/faculty"
             }
             else {
                 var s = document.getElementById("key")
@@ -187,9 +186,10 @@
     </head>
     <body>
         <div class="container">
-            <div>
-            <input type="text" id="ax" placeholder="Student ID">
-            <input type="password" id="bx" class="col-xs-offset-2" placeholder="Password">
+            <form action="/login" method="post">
+              <input type="text" id="ax" placeholder="Student ID" name="username">
+              <input type="password" id="bx" class="col-xs-offset-2" placeholder="Password" name="password">
+            </form>
             <input type="checkbox">Remember me
             <a href="https://www.hackerrank.com/auth/forget_password?_l=2i2025">Forget your password?</a><br/><br/>
             <body onload="generate()">
