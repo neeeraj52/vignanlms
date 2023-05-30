@@ -11,17 +11,18 @@
  <body>
     <div class="col">
         <div class="main">
+          <form action="/studata" method="post">
             <h4>YEAR</h4>
-            <select id="x">
+            <select id="x" name="year">
                 <option value="select ">select</option>
-                <option value="1">1 year</option>
-                <option value="2">2 year</option>
-                <option value="3">3 year</option>
-                <option value="4">4 year</option>
+                <option value="1year">1 year</option>
+                <option value="2year">2 year</option>
+                <option value="3year">3 year</option>
+                <option value="4year">4 year</option>
             </select>
             <div>  
                 <h4>BRANCH</h4>
-                <select id="x">
+                <select id="x" name="branch">
                     <option value="select ">select</option>
                     <option value="eee">eee</option>
                     <option value="ece">ece</option>
@@ -31,7 +32,7 @@
             </div>
             <div>       
                 <h4>SECTION</h4>
-                <select id="x">
+                <select id="x" name="section">
                     <option value="select ">select</option>
                     <option value="a">A</option>
                     <option value="b">B</option>
@@ -40,8 +41,9 @@
                 </select>
             </div>
             <div>
-                <input type="submit" onclick="location.href='/studata'"" >
-            </div>                               
+                <input type="submit" onclick="location.href='/studata'">
+            </div> 
+          </form>
         </div>    
  </body>
    <style>
