@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+      <form>
+            <label>examination name</label>
+            <select id="x" name="examname">
+                <option value="select ">select</option>
+                <option value="unit1">unit1</option>
+                <option value="unit2">unit2</option>
+                <option value="unit3">unit3</option>
+                <option value="unit4">unit4</option>
+                <option value="mid1">mid1</option>
+                <option value="mid2">mid2</option>
+            </select>
+        <label for="dateofexam">Date of exam</label>
+        <input type="date" id="dateofexam" name="dateofexam"><br>
+        <table border="1">
+            <thead>
+                <tr>
+                    <td><b>Name Of The Student</b></td>
+                    <td><b>Roll No</b></td>
+                    <td><b>Marks</b></td>
+                </tr>
+            </thead>
+            <tbody>
+              {% for s in stu %}
+                <tr>
+                  <td>{{s["SNAME"]}}</td>
+                  <td>{{s["ROLL NO"]}}</td>
+                  <td align="middle"><input type="text" id="text" size="4" maxlength="4" name="{{s['SNAME']}}">
+                </tr>
+              {% endfor %}
+            </tbody>
+        </table>
+        <center>
+          <input type="submit" value="submit" id="submit">
+        </center>
+      </form>
+    </body>
+    <style>
+        table{
+            width: 100%;
+            table-layout: fixed;
+        }
+        thead{
+            text-align: center;
+        }
+        input[type="text"]:hover{
+            border-color: black;
+        }
+        input[type="text"]{
+            text-align: center;
+        }
+        #submit{
+          margin-top:20px
+          height: 45px;
+          width: 200px;
+          font-size: large;
+          background-color: rgb(117,09,127);
+          color: aliceblue;
+          border-radius: 5px;
+        }
+    </style>
+</html>

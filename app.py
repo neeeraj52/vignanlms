@@ -69,5 +69,12 @@ def evaluation():
   return render_template("evaluation.html")
 
 
+@app.route("/posting",methods=['post'])
+def posting():
+  data=request.form
+  stu = load_students_from_db(data)
+  return render_template("evaluation_table.html",stu=stu)
+  
+
 if __name__ == "__main__":
   app.run(host="0.0.0.0", debug=True)

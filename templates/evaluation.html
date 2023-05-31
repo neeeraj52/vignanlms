@@ -7,50 +7,44 @@
         <title>Document</title>
     </head>
     <body>
-        <form>
+        <form action="/posting" method="post">
             <label for="Branches"><b>Choose a Branch:</b></label>
-            <select name="Branches" id="Branches">
+            <select name="branch" id="Branches">
                 <option value="Select">Select</option>
-                <option value="CIVIL">Civil Engineering</option>
-                <option value="EEE">Electrical and Electronics Engineering</option>
-                <option value="MECH">Mechanical Engineering</option>
-                <option value="ECE">Electronics and Communication Engineering</option>
-                <option value="CSE">Computer Scienece and Engineering</option>
-                <option value="AIML">Artificial Intelligence and Machine Learning</option>
-                <option value="DS">Data Science</option>
-                <option value="IT">Information Technology</option>
-                <option value="EIE">Electronics Instumentation and Engineering</option>
-                <option value="AIDS">Artificial Intelligence and Data Science</option>
-                <option value="BSH">Basic Sciences and Humanities</option>
+                <option value="civil">Civil Engineering</option>
+                <option value="eee">Electrical and Electronics Engineering</option>
+                <option value="mech">Mechanical Engineering</option>
+                <option value="ece">Electronics and Communication Engineering</option>
+                <option value="cse">Computer Scienece and Engineering</option>
+                <option value="aiml">Artificial Intelligence and Machine Learning</option>
+                <option value="ds">Data Science</option>
+                <option value="it">Information Technology</option>
+                <option value="eie">Electronics Instumentation and Engineering</option>
+                <option value="aids">Artificial Intelligence and Data Science</option>
+                <option value="bhs">Basic Sciences and Humanities</option>
             </select><br>
             <div id="cx">
                 <label for="Year"><b>Choose a Year:</b></label>
-                <select name="Year" id="Year">
+                <select name="year" id="Year">
                     <option value="select">Select</option>
-                    <option value="1styear">1st Year</option>
-                    <option value="2ndyear">2nd Year</option>
-                    <option value="3rdyear">3rd Year</option>
-                    <option value="4thyear">4th Year</option>
+                    <option value="1year">1st Year</option>
+                    <option value="2year">2nd Year</option>
+                    <option value="3year">3rd Year</option>
+                    <option value="4year">4th Year</option>
                 </select>
             </div>
             <div id="dx">
                 <label for="Sections"><b>Choose a Section:</b></label>
                 <select name="section" id="section">
                     <option value="select">Select</option>
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
-                    <option value="D">D</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                    <option value="d">D</option>
                 </select>
             </div>
+          <input type="submit" value="get students data" id="submit">
         </form>
-        <p><label><b>Enter Name Of The Examination:</b></label></p>
-        <input type="text" id="exam" size="30px"><br>
-        <div id="ax">
-            <label><b>Select The Date Of Exam Conducted:</b></label>
-            <input type="date" id="date"><br>
-        </div>
-        <button type="submit" id="submit">Get Students List</button>
     </body>
     <style>
         #Branches{
