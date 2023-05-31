@@ -18,8 +18,8 @@
           <tr>
             <td>{{s["SNAME"]}}</td>
             <td>{{s["ROLL NO"]}}</td>
-            <td><input type="radio" name="status"></td>
-            <td><input type="radio" name="status"></td>
+            <td><input type="radio" name="{{s['SNAME']}}"></td>
+            <td><input type="radio" name="{{s['SNAME']}}"></td>
           </tr>
         {% endfor %}
     </table>
