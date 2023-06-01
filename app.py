@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, session, redirect, url_for
 from database import client
+from ssss import showtime
+from just import sendmsg
 
 app = Flask(__name__)
 app.secret_key = "super secret key"
@@ -69,12 +71,38 @@ def evaluation():
   return render_template("evaluation.html")
 
 
-@app.route("/posting",methods=['post'])
+@app.route("/posting", methods=['post'])
 def posting():
-  data=request.form
+  data = request.form
   stu = load_students_from_db(data)
-  return render_template("evaluation_table.html",stu=stu)
-  
+  session["section"] = data["section"]
+  return render_template("evaluation_table.html", stu=stu)
+
+
+@app.route("/submited", methods=["post"])
+def submited():
+  msg = ""
+  data = request.form
+  db = client["marks"]
+  col = db["3yeareee" + data["subject"]]
+  for s in data:
+    myquery = {s: "Not Yet Posted"}
+    newvalues = {"$set": {s: data[s]}}
+    col.update_one(myquery, newvalues)
+  return msg
+
+
+@app.route("/sendmesg")
+def mesg():
+  hour, minut = showtime()
+  k = sendmesg(hour, minut)
+  return None
+
+
+@app.route("/button")
+def button():
+  return render_template("button.html")
+
 
 if __name__ == "__main__":
   app.run(host="0.0.0.0", debug=True)
