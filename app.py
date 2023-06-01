@@ -95,7 +95,7 @@ def submited():
 @app.route("/sendmesg")
 def mesg():
   hour, minut = showtime()
-  k = sendmesg(hour, minut)
+  k = sendmsg(int(hour), int(minut))
   return None
 
 
