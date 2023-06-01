@@ -1,7 +1,5 @@
 from flask import Flask, render_template, request, session, redirect, url_for
 from database import client
-from ssss import showtime
-from just import sendmsg
 
 app = Flask(__name__)
 app.secret_key = "super secret key"
@@ -85,23 +83,12 @@ def submited():
   data = request.form
   db = client["marks"]
   col = db["3yeareee" + data["subject"]]
+  col.delete_many({})
+  a = {}
   for s in data:
-    myquery = {s: "Not Yet Posted"}
-    newvalues = {"$set": {s: data[s]}}
-    col.update_one(myquery, newvalues)
+    a[s] = data[s]
+  col.insert_one(a)
   return msg
-
-
-@app.route("/sendmesg")
-def mesg():
-  hour, minut = showtime()
-  k = sendmsg(int(hour), int(minut))
-  return None
-
-
-@app.route("/button")
-def button():
-  return render_template("button.html")
 
 
 if __name__ == "__main__":
