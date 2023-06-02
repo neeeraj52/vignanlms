@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+  <form action="/marked" method="post">
     <table style="width:100%" border="2px">
         <tr>
           <th>SNAME</th>
@@ -18,10 +19,22 @@
           <tr>
             <td>{{s["SNAME"]}}</td>
             <td>{{s["ROLL NO"]}}</td>
-            <td><input type="radio" name="{{s['SNAME']}}"></td>
-            <td><input type="radio" name="{{s['SNAME']}}"></td>
+            <td><input type="radio" name="{{s['SNAME']}}" value="p"></td>
+            <td><input type="radio" name="{{s['SNAME']}}" value="a"></td>
           </tr>
         {% endfor %}
-    </table>
+    </table><br>
+    <center>
+      <input id="submit" type="submit" value="submit">
+    </center>
+  </form>
 </body>
+<style>
+  #submit{
+    width: 200px;
+    height: 45px;
+    background-color:blueviolet;
+    color:white;
+  }
+</style>
 </html>

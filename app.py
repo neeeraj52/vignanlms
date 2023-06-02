@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session, redirect, url_for
+from flask import Flask, render_template, request, session, redirect, url_for, jsonify
 from database import client
 
 app = Flask(__name__)
@@ -87,6 +87,26 @@ def submited():
   a = {}
   for s in data:
     a[s] = data[s]
+  col.insert_one(a)
+  return msg
+
+
+@app.route("/marked", methods=["post"])
+def marked():
+  msg = ""
+  data = request.form
+  db = client["attendence"]
+  col = db["3yeareeea"]
+  a = {}
+  b = []
+  for i in col.find():
+    b.append(i)
+  for s in data:
+    if (data[s] == "p"):
+      a[s] = str(int(b[0][s]) + 1)
+    else:
+      a[s] = str(int(b[0][s]) + 0)
+  col.delete_many({})
   col.insert_one(a)
   return msg
 
