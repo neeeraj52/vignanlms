@@ -3,7 +3,7 @@
     <style>
         .container{
             width: 350px;
-            height: 300px;
+            height: 230px;
             border: 1px solid white;
             padding: 20px;
             margin: auto;
@@ -135,6 +135,9 @@
             background-repeat:no-repeat;
             
           }
+          footer{
+            color:white;
+          }
         }
       @media screen and (max-width: 480px) {
           body {
@@ -201,9 +204,6 @@
             <form action="/login" method="post">
               <input type="text" id="ax" placeholder="Student ID" name="username" required>
               <input type="password" id="bx" class="col-xs-offset-2" placeholder="Password" name="password" required>
-          
-            <input type="checkbox">Remember me
-            <a href="https://www.hackerrank.com/auth/forget_password?_l=2i2025">Forget your password?</a><br/><br/>
             <body onload="generate()">
                 <div id="user-input" class="inline">
                     <input type="text" id="tx" placeholder="Captcha code" onk/>
