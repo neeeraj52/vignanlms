@@ -14,13 +14,16 @@
   <div class="bodym"></div>
     <div class="body">
       <div class="ass">
+        <h1>assignment tab</h1>
 
       </div>
       <div class="side">
         <div class="att">
+          <h1>attendence tab</h1>
 
         </div>
         <div class="ann">
+          <h1>announcement tab</h1>
 
         </div>
       </div>
@@ -43,32 +46,64 @@
     width:300px;
     height: 100px;
   }
-  .ass{
-    width:70%;
-    height: 82vh;
-    border:1px solid black;
-    margin:20px 10px;
-    border-radius: 15px;
-    float:left;
+  h1{
+    text-align:center;
   }
-  .att{
-    width:27%;
-    height:35vh;
-    border:1px solid black;
-    border-radius: 15px;
-    margin:10px 10px;
-    float:right
-  }
-  .ann{
-    width:27%;
-    height:45vh;
-    border:1px solid black;
-    border-radius: 15px;
-    margin:10px 10px;
-    float:right
-  }
-  .bodym{
-    box-sizing: border-box;
-  }
+  @media screen and (min-width: 480px) {
+      .ass{
+        width:70%;
+        height: 82vh;
+        border:1px solid black;
+        margin:20px 10px;
+        border-radius: 15px;
+        float:left;
+      }
+      .att{
+        width:27%;
+        height:35vh;
+        border:1px solid black;
+        border-radius: 15px;
+        margin:10px 10px;
+        float:right
+      }
+      .ann{
+        width:27%;
+        height:45vh;
+        border:1px solid black;
+        border-radius: 15px;
+        margin:10px 10px;
+        float:right
+      }
+      .bodym{
+        box-sizing: border-box;
+      }
+    }
+  @media screen and (max-width: 480px) {
+    .ass{
+        width:95%;
+        height: 82vh;
+        border:1px solid black;
+        margin:20px 10px;
+        border-radius: 15px;
+        float:left;
+      }
+      .att{
+        width:94%;
+        height:35vh;
+        border:1px solid black;
+        border-radius: 15px;
+        margin:10px 10px;
+        float:right
+      }
+      .ann{
+        width:94%;
+        height:45vh;
+        border:1px solid black;
+        border-radius: 15px;
+        margin:10px 10px;
+        float:right
+      }
+      
+    }
 </style>
 </html>

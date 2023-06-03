@@ -9,10 +9,18 @@
   <body>
     <center>
       <h1>your attendence has been submited</h1><br>
-      <h2>and the list of absenties are :-</h2>
+      <h2>The list of absenties are :-</h2>
       {% for i in abs %}
         <p>{{i}}</p>
       {% endfor %}
     </center>
   </body>
+  <style>
+    h1{
+      color:green;
+    }
+    p{
+      color:red;
+    }
+  </style>
 </html>
