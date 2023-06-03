@@ -99,6 +99,7 @@ def marked():
   col = db["3yeareeea"]
   a = {}
   b = []
+  c = []
   for i in col.find():
     b.append(i)
   for s in data:
@@ -106,9 +107,10 @@ def marked():
       a[s] = str(int(b[0][s]) + 1)
     else:
       a[s] = str(int(b[0][s]) + 0)
+      c.append(s)
   col.delete_many({})
   col.insert_one(a)
-  return msg
+  return render_template("attsub.html", abs=c)
 
 
 if __name__ == "__main__":
