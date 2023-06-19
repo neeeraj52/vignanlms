@@ -103,6 +103,7 @@ def marked():
   for i in col.find():
     b.append(i)
   for s in data:
+    a["total days"] = str(int(b[0]["total days"]) + 1)
     if (data[s] == "p"):
       a[s] = str(int(b[0][s]) + 1)
     else:

@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <style>
+        *{
+          margin:0;
+          padding:0;
+        }
         .container{
             width: 350px;
             height: 230px;
@@ -73,7 +77,7 @@
         p{
             color: rgb(180,180,180);
         }
-        #vgnt{
+        #logo{
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -159,6 +163,13 @@
         color:red;
         text-align:center;
       }
+      #preloader{
+        background:white url("static/preloader.gif") no-repeat center center;
+        height:100vh;
+        width: 100%;
+        z-index:100;
+        position:fixed;
+      }
     </style>
     <script>
         var captcha;
@@ -202,10 +213,11 @@
         <meta name="google-site-verification" content="cAOMIUeC03wbV7VjuH9WtJRn-O3ZkDO08tUpfyRe2fs" />
         <title>vignanlms</title>
         <link rel="shortcut icon" type="static/png" href="static/favicon.png">
-        <b><img id="vgnt" src="static/logo.png"></b>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"integrity= "sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"crossorigin="anonymous">
     </head>
     <body>
+      <div id="preloader"></div>
+      <img id="logo" src="static/logo.png">
       <p id="error">{{msg}}</p>
       <form action="{{url_for('login')}}" method="post">
         <div class="container">
@@ -231,5 +243,11 @@
         <footer>
             &copy;copyright by <b><h2>Vignan Group Of Institutions</h2></b>
         </footer>
+      <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load",function(){
+          loader.style.display = "none";
+        });
+      </script>
     </body>
 </html>
